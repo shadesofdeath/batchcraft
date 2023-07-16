@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ----------------Webp Image Extensions app-----------------
+:: ----------------------------------------------------------
+echo --- Webp Image Extensions app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.WebpImageExtension' | Remove-AppxPackage"
+:: ----------------------------------------------------------

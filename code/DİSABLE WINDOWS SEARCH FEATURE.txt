@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ------------------Windows Search feature------------------
+:: ----------------------------------------------------------
+echo --- Windows Search feature
+dism /Online /Disable-Feature /FeatureName:"SearchEngine-Client-Package" /NoRestart
+:: ----------------------------------------------------------

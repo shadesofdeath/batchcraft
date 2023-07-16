@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ---------------------Turn off sensors---------------------
+:: ----------------------------------------------------------
+echo --- Turn off sensors
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" /v "DisableSensors" /t REG_DWORD /d "1" /f
+:: ----------------------------------------------------------

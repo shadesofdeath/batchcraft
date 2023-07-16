@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ------------------Mail and Calendar app-------------------
+:: ----------------------------------------------------------
+echo --- Mail and Calendar app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'microsoft.windowscommunicationsapps' | Remove-AppxPackage"
+:: ----------------------------------------------------------

@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --------------------Windows Camera app--------------------
+:: ----------------------------------------------------------
+echo --- Windows Camera app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.WindowsCamera' | Remove-AppxPackage"
+:: ----------------------------------------------------------

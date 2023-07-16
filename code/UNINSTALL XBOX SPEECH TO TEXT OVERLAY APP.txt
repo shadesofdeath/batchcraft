@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -------------Xbox Speech To Text Overlay app--------------
+:: ----------------------------------------------------------
+echo --- Xbox Speech To Text Overlay app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.XboxSpeechToTextOverlay' | Remove-AppxPackage"
+:: ----------------------------------------------------------

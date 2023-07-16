@@ -1,0 +1,15 @@
+
+:: ----------------------------------------------------------
+:: --------Disable devicecensus.exe (telemetry) task---------
+:: ----------------------------------------------------------
+echo --- Disable devicecensus.exe (telemetry) task
+schtasks /change /TN "Microsoft\Windows\Device Information\Device" /disable
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------Disable devicecensus.exe (telemetry) process-------
+:: ----------------------------------------------------------
+echo --- Disable devicecensus.exe (telemetry) process
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\'DeviceCensus.exe'" /v "Debugger" /t REG_SZ /d "%windir%\System32\taskkill.exe" /f
+:: ----------------------------------------------------------

@@ -1,0 +1,8 @@
+
+:: ----------------------------------------------------------
+:: -Disable device metadata retrieval (breaks auto updates)--
+:: ----------------------------------------------------------
+echo --- Disable device metadata retrieval (breaks auto updates)
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata" /v "PreventDeviceMetadataFromNetwork" /t REG_DWORD /d 1 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Device Metadata" /v "PreventDeviceMetadataFromNetwork" /t REG_DWORD /d 1 /f
+:: ----------------------------------------------------------

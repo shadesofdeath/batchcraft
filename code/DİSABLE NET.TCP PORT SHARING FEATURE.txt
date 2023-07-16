@@ -1,0 +1,6 @@
+:: ----------------------------------------------------------
+:: ---------------Net.TCP Port Sharing feature---------------
+:: ----------------------------------------------------------
+echo --- Net.TCP Port Sharing feature
+dism /Online /Disable-Feature /FeatureName:"WCF-TCP-PortSharing45" /NoRestart
+:: ----------------------------------------------------------

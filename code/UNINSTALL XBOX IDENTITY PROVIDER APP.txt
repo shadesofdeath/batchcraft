@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ----------------Xbox Identity Provider app----------------
+:: ----------------------------------------------------------
+echo --- Xbox Identity Provider app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.XboxIdentityProvider' | Remove-AppxPackage"
+:: ----------------------------------------------------------

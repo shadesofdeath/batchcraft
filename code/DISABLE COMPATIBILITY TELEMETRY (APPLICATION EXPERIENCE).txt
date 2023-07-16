@@ -1,0 +1,35 @@
+
+:: Disable sending information to Customer Experience Improvement Program
+echo --- Disable sending information to Customer Experience Improvement Program
+schtasks /change /TN "Microsoft\Windows\Application Experience\ProgramDataUpdater" /disable
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----Disable Application Impact Telemetry Agent task------
+:: ----------------------------------------------------------
+echo --- Disable Application Impact Telemetry Agent task
+schtasks /change /TN "Microsoft\Windows\Application Experience\AitAgent" /disable
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --Disable "Disable apps to improve performance" reminder--
+:: ----------------------------------------------------------
+echo --- Disable "Disable apps to improve performance" reminder
+schtasks /change /TN "Microsoft\Windows\Application Experience\StartupAppTask" /disable
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------Disable Microsoft Compatibility Appraiser task------
+:: ----------------------------------------------------------
+echo --- Disable Microsoft Compatibility Appraiser task
+schtasks /change /TN "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /disable
+:: ----------------------------------------------------------
+
+
+:: Disable CompatTelRunner.exe (Microsoft Compatibility Appraiser) process
+echo --- Disable CompatTelRunner.exe (Microsoft Compatibility Appraiser) process
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\'CompatTelRunner.exe'" /v "Debugger" /t REG_SZ /d "%windir%\System32\taskkill.exe" /f
+:: ----------------------------------------------------------

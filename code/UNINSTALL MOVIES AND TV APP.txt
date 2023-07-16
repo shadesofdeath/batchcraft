@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --------------------Movies and TV app---------------------
+:: ----------------------------------------------------------
+echo --- Movies and TV app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.ZuneVideo' | Remove-AppxPackage"
+:: ----------------------------------------------------------

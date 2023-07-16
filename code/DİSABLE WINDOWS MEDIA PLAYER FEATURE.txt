@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ---------------Windows Media Player feature---------------
+:: ----------------------------------------------------------
+echo --- Windows Media Player feature
+dism /Online /Disable-Feature /FeatureName:"WindowsMediaPlayer" /NoRestart
+:: ----------------------------------------------------------

@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --------Enable Reset Base in Dism Component Store---------
+:: ----------------------------------------------------------
+echo --- Enable Reset Base in Dism Component Store
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Configuration" /v "DisableResetbase" /t "REG_DWORD" /d "0" /f
+:: ----------------------------------------------------------

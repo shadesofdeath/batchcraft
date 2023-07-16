@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --------------Disable Language Setting Sync---------------
+:: ----------------------------------------------------------
+echo --- Disable Language Setting Sync
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Language" /t REG_DWORD /v "Enabled" /d 0 /f
+:: ----------------------------------------------------------

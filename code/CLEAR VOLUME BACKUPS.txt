@@ -1,0 +1,6 @@
+
+:: ----------------------------------------------------------
+:: -----------Clear volume backups (shadow copies)-----------
+:: ----------------------------------------------------------
+echo --- Clear volume backups (shadow copies)
+vssadmin delete shadows /all /quiet

@@ -1,0 +1,5 @@
+
+:: Disable Windows Spotlight (random wallpaper on lock screen)
+echo --- Disable Windows Spotlight (random wallpaper on lock screen)
+reg add "HKLM\Software\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsSpotlightFeatures" /t "REG_DWORD" /d "1" /f
+:: ----------------------------------------------------------

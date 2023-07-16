@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --------------Xbox Game Bar Plugin appcache---------------
+:: ----------------------------------------------------------
+echo --- Xbox Game Bar Plugin appcache
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.XboxGameOverlay' | Remove-AppxPackage"
+:: ----------------------------------------------------------

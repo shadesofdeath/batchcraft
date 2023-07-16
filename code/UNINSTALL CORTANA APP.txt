@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ------------------Uninstall Cortana app-------------------
+:: ----------------------------------------------------------
+echo --- Uninstall Cortana app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.549981C3F5F10' | Remove-AppxPackage"
+:: ----------------------------------------------------------

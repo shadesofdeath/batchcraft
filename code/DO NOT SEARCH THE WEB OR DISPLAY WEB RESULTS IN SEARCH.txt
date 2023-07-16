@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --Do not search the web or display web results in Search--
+:: ----------------------------------------------------------
+echo --- Do not search the web or display web results in Search
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "ConnectedSearchUseWeb" /t REG_DWORD /d 0 /f
+:: ----------------------------------------------------------

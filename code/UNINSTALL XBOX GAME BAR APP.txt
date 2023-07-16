@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --------------------Xbox Game Bar app---------------------
+:: ----------------------------------------------------------
+echo --- Xbox Game Bar app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.XboxGamingOverlay' | Remove-AppxPackage"
+:: ----------------------------------------------------------

@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ---------------Windows Fax and Scan feature---------------
+:: ----------------------------------------------------------
+echo --- Windows Fax and Scan feature
+dism /Online /Disable-Feature /FeatureName:"FaxServicesClientPackage" /NoRestart
+:: ----------------------------------------------------------

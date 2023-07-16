@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ------------Microsoft Solitaire Collection app------------
+:: ----------------------------------------------------------
+echo --- Microsoft Solitaire Collection app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.MicrosoftSolitaireCollection' | Remove-AppxPackage"
+:: ----------------------------------------------------------

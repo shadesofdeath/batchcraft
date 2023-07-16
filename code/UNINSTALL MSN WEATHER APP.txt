@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ---------------------MSN Weather app----------------------
+:: ----------------------------------------------------------
+echo --- MSN Weather app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.BingWeather' | Remove-AppxPackage"
+:: ----------------------------------------------------------

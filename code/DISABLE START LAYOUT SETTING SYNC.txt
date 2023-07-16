@@ -1,0 +1,8 @@
+
+:: ----------------------------------------------------------
+:: ------------Disable Start Layout Setting Sync-------------
+:: ----------------------------------------------------------
+echo --- Disable Start Layout Setting Sync
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync" /v "DisableStartLayoutSettingSync" /t REG_DWORD /d 2 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync" /v "DisableStartLayoutSettingSyncUserOverride" /t REG_DWORD /d 1 /f
+:: ----------------------------------------------------------

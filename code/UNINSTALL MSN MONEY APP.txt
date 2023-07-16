@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ----------------------MSN Money app-----------------------
+:: ----------------------------------------------------------
+echo --- MSN Money app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.BingFinance' | Remove-AppxPackage"
+:: ----------------------------------------------------------

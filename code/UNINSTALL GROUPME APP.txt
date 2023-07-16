@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -----------------------GroupMe app------------------------
+:: ----------------------------------------------------------
+echo --- GroupMe app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.GroupMe10' | Remove-AppxPackage"
+:: ----------------------------------------------------------

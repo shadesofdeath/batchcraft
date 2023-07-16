@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -----------------Microsoft 3D Builder app-----------------
+:: ----------------------------------------------------------
+echo --- Microsoft 3D Builder app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.3DBuilder' | Remove-AppxPackage"
+:: ----------------------------------------------------------

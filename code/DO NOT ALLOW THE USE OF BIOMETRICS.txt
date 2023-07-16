@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ------------Do not allow the use of biometrics------------
+:: ----------------------------------------------------------
+echo --- Do not allow the use of biometrics
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Biometrics" /v "Enabled" /t REG_DWORD /d "0" /f
+:: ----------------------------------------------------------

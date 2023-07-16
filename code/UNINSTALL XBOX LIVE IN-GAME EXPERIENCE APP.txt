@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -------------Xbox Live in-game experience app-------------
+:: ----------------------------------------------------------
+echo --- Xbox Live in-game experience app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.Xbox.TCUI' | Remove-AppxPackage"
+:: ----------------------------------------------------------

@@ -1,0 +1,63 @@
+
+:: ----------------------------------------------------------
+:: -----------Print and Document Services feature------------
+:: ----------------------------------------------------------
+echo --- Print and Document Services feature
+dism /Online /Disable-Feature /FeatureName:"Printing-Foundation-Features" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ---------------Work Folders Client feature----------------
+:: ----------------------------------------------------------
+echo --- Work Folders Client feature
+dism /Online /Disable-Feature /FeatureName:"WorkFolders-Client" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------------Internet Printing Client-----------------
+:: ----------------------------------------------------------
+echo --- Internet Printing Client
+dism /Online /Disable-Feature /FeatureName:"Printing-Foundation-InternetPrinting-Client" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------------------LPD Print Service---------------------
+:: ----------------------------------------------------------
+echo --- LPD Print Service
+dism /Online /Disable-Feature /FeatureName:"LPDPrintService" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------------LPR Port Monitor feature-----------------
+:: ----------------------------------------------------------
+echo --- LPR Port Monitor feature
+dism /Online /Disable-Feature /FeatureName:"Printing-Foundation-LPRPortMonitor" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------------Microsoft Print to PDF feature--------------
+:: ----------------------------------------------------------
+echo --- Microsoft Print to PDF feature
+dism /Online /Disable-Feature /FeatureName:"Printing-PrintToPDFServices-Features" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------------------XPS Services feature-------------------
+:: ----------------------------------------------------------
+echo --- XPS Services feature
+dism /Online /Disable-Feature /FeatureName:"Printing-XPSServices-Features" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------------------XPS Viewer feature--------------------
+:: ----------------------------------------------------------
+echo --- XPS Viewer feature
+dism /Online /Disable-Feature /FeatureName:"Xps-Foundation-Xps-Viewer" /NoRestart
+:: ----------------------------------------------------------

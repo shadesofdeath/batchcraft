@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --------------------Store Purchase app--------------------
+:: ----------------------------------------------------------
+echo --- Store Purchase app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.StorePurchaseApp' | Remove-AppxPackage"
+:: ----------------------------------------------------------

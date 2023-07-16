@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -----------Disable Windows DRM internet access------------
+:: ----------------------------------------------------------
+echo --- Disable Windows DRM internet access
+reg add "HKLM\SOFTWARE\Policies\Microsoft\WMDRM" /v "DisableOnline" /t REG_DWORD /d 1 /f
+:: ----------------------------------------------------------

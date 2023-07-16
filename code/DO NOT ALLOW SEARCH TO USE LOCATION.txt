@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -----------Do not allow search to use location------------
+:: ----------------------------------------------------------
+echo --- Do not allow search to use location
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowSearchToUseLocation" /t REG_DWORD /d 0 /f
+:: ----------------------------------------------------------

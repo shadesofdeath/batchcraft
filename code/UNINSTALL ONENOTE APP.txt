@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -----------------------OneNote app------------------------
+:: ----------------------------------------------------------
+echo --- OneNote app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.Office.OneNote' | Remove-AppxPackage"
+:: ----------------------------------------------------------

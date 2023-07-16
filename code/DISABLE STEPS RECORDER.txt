@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ------------------Disable steps recorder------------------
+:: ----------------------------------------------------------
+echo --- Disable steps recorder
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v "DisableUAR" /t REG_DWORD /d 1 /f
+:: ----------------------------------------------------------

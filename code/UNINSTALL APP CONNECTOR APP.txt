@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --------------------App Connector app---------------------
+:: ----------------------------------------------------------
+echo --- App Connector app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.Appconnector' | Remove-AppxPackage"
+:: ----------------------------------------------------------

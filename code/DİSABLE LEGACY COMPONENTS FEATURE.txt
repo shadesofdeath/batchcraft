@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ----------------Legacy Components feature-----------------
+:: ----------------------------------------------------------
+echo --- Legacy Components feature
+dism /Online /Disable-Feature /FeatureName:"LegacyComponents" /NoRestart
+:: ----------------------------------------------------------

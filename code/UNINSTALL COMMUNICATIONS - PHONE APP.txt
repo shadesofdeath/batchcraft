@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ----------------Communications - Phone app----------------
+:: ----------------------------------------------------------
+echo --- Communications - Phone app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.CommsPhone' | Remove-AppxPackage"
+:: ----------------------------------------------------------

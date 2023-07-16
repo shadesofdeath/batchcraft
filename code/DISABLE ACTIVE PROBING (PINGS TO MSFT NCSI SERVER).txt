@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ----Disable active probing (pings to MSFT NCSI server)----
+:: ----------------------------------------------------------
+echo --- Disable active probing (pings to MSFT NCSI server)
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet" /v "EnableActiveProbing" /t REG_DWORD /d "0" /f
+:: ----------------------------------------------------------

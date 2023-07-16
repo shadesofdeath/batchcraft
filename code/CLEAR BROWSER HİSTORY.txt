@@ -1,0 +1,188 @@
+
+:: ----------------------------------------------------------
+:: -Clear all Opera data (user profiles, settings, and data)-
+:: ----------------------------------------------------------
+echo --- Clear all Opera data (user profiles, settings, and data)
+:: Windows XP
+rd /s /q "%USERPROFILE%\Local Settings\Application Data\Opera\Opera"
+:: Windows Vista and later
+rd /s /q "%localappdata%\Opera\Opera"
+rd /s /q "%APPDATA%\Opera\Opera"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------------Clear Internet Explorer caches--------------
+:: ----------------------------------------------------------
+echo --- Clear Internet Explorer caches
+del /f /q "%localappdata%\Microsoft\Windows\INetCache\IE\*"
+rd /s /q "%localappdata%\Microsoft\Windows\WebCache"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------Clear Internet Explorer recent URLs------------
+:: ----------------------------------------------------------
+echo --- Clear Internet Explorer recent URLs
+reg delete "HKCU\SOFTWARE\Microsoft\Internet Explorer\TypedURLs" /va /f
+reg delete "HKCU\SOFTWARE\Microsoft\Internet Explorer\TypedURLsTime" /va /f
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------Clear Temporary Internet Files (browser cache)------
+:: ----------------------------------------------------------
+echo --- Clear Temporary Internet Files (browser cache)
+:: Windows XP
+rd /s /q %userprofile%\Local Settings\Temporary Internet Files
+:: Windows 7
+rd /s /q "%localappdata%\Microsoft\Windows\Temporary Internet Files"
+takeown /f "%localappdata%\Temporary Internet Files" /r /d y
+icacls "%localappdata%\Temporary Internet Files" /grant administrators:F /t
+rd /s /q "%localappdata%\Temporary Internet Files"
+:: Windows 8 and above
+rd /s /q "%localappdata%\Microsoft\Windows\INetCache"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------Clear Internet Explorer Feeds Cache------------
+:: ----------------------------------------------------------
+echo --- Clear Internet Explorer Feeds Cache
+rd /s /q "%localappdata%\Microsoft\Feeds Cache"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------------Clear Internet Explorer cookies--------------
+:: ----------------------------------------------------------
+echo --- Clear Internet Explorer cookies
+:: Windows 7 browsers
+rd /s /q "%APPDATA%\Microsoft\Windows\Cookies"
+:: Windows 8 and higher
+rd /s /q "%localappdata%\Microsoft\Windows\INetCookies"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------------Clear Internet Explorer DOMStore-------------
+:: ----------------------------------------------------------
+echo --- Clear Internet Explorer DOMStore
+rd /s /q "%localappdata%\Microsoft\InternetExplorer\DOMStore"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ----------Clear all Internet Explorer user data-----------
+:: ----------------------------------------------------------
+echo --- Clear all Internet Explorer user data
+rd /s /q "%localappdata%\Microsoft\Internet Explorer"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------------Clear Google Chrome crash reports-------------
+:: ----------------------------------------------------------
+echo --- Clear Google Chrome crash reports
+rd /s /q "%localappdata%\Google\Chrome\User Data\Crashpad\reports\"
+rd /s /q "%localappdata%\Google\CrashReports\"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------------Clear Software Reporter Tool logs-------------
+:: ----------------------------------------------------------
+echo --- Clear Software Reporter Tool logs
+del /f /q "%localappdata%\Google\Software Reporter Tool\*.log"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ----------------Clear all Chrome user data----------------
+:: ----------------------------------------------------------
+echo --- Clear all Chrome user data
+:: Windows XP
+rd /s /q "%USERPROFILE%\Local Settings\Application Data\Google\Chrome\User Data"
+:: Windows Vista and later
+rd /s /q "%localappdata%\Google\Chrome\User Data"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------------Clear browsing history and caches-------------
+:: ----------------------------------------------------------
+echo --- Clear browsing history and caches
+set ignoreFiles="content-prefs.sqlite" "permissions.sqlite" "favicons.sqlite"
+for %%d in ("%APPDATA%\Mozilla\Firefox\Profiles\"
+            "%USERPROFILE%\Local Settings\Application Data\Mozilla\Firefox\Profiles\"
+        ) do (
+    IF EXIST %%d (
+        FOR /d %%p IN (%%d*) DO (
+            for /f "delims=" %%f in ('dir /b /s "%%p\*.sqlite" 2^>nul') do (
+                set "continue="
+                for %%i in (%ignoreFiles%) do ( 
+                    if %%i == "%%~nxf" (
+                        set continue=1
+                    )
+                )
+                if not defined continue (
+                    del /q /s /f %%f
+                )
+            )
+        )
+    )
+)
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ---Clear all Firefox user profiles, settings, and data----
+:: ----------------------------------------------------------
+echo --- Clear all Firefox user profiles, settings, and data
+rd /s /q "%localappdata%\Mozilla\Firefox\Profiles"
+rd /s /q "%APPDATA%\Mozilla\Firefox\Profiles"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------------------Clear Webpage Icons--------------------
+:: ----------------------------------------------------------
+echo --- Clear Webpage Icons
+:: Windows XP
+del /q /s /f "%USERPROFILE%\Local Settings\Application Data\Safari\WebpageIcons.db"
+:: Windows Vista and later
+del /q /s /f "%localappdata%\Apple Computer\Safari\WebpageIcons.db"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------------------Clear Safari cache--------------------
+:: ----------------------------------------------------------
+echo --- Clear Safari cache
+:: Windows XP
+del /q /s /f "%USERPROFILE%\Local Settings\Application Data\Apple Computer\Safari\Cache.db"
+:: Windows Vista and later
+del /q /s /f "%localappdata%\Apple Computer\Safari\Cache.db"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------------------Clear Safari cookies-------------------
+:: ----------------------------------------------------------
+echo --- Clear Safari cookies
+:: Windows XP
+del /q /s /f "%USERPROFILE%\Local Settings\Application Data\Apple Computer\Safari\Cookies.db"
+:: Windows Vista and later
+del /q /s /f "%localappdata%\Apple Computer\Safari\Cookies.db"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: Clear all Safari data (user profiles, settings, and data)-
+:: ----------------------------------------------------------
+echo --- Clear all Safari data (user profiles, settings, and data)
+:: Windows XP
+rd /s /q "%USERPROFILE%\Local Settings\Application Data\Apple Computer\Safari"
+:: Windows Vista and later
+rd /s /q "%AppData%\Apple Computer\Safari"
+:: ----------------------------------------------------------

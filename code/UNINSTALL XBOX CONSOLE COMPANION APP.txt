@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ----------------Xbox Console Companion app----------------
+:: ----------------------------------------------------------
+echo --- Xbox Console Companion app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.XboxApp' | Remove-AppxPackage"
+:: ----------------------------------------------------------

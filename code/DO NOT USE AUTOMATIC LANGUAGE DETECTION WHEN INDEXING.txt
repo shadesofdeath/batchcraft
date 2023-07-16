@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: --Do not use automatic language detection when indexing---
+:: ----------------------------------------------------------
+echo --- Do not use automatic language detection when indexing
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AlwaysUseAutoLangDetection" /t REG_DWORD /d 0 /f
+:: ----------------------------------------------------------

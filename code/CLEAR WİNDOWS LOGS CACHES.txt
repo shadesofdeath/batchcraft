@@ -1,0 +1,234 @@
+
+:: ----------------------------------------------------------
+:: ------------------Clear thumbnail cache-------------------
+:: ----------------------------------------------------------
+echo --- Clear thumbnail cache
+del /f /s /q /a %LocalAppData%\Microsoft\Windows\Explorer\*.db
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------------Clear Windows temp files-----------------
+:: ----------------------------------------------------------
+echo --- Clear Windows temp files
+del /f /q %localappdata%\Temp\*
+rd /s /q "%WINDIR%\Temp"
+rd /s /q "%TEMP%"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ----------------Clear main telemetry file-----------------
+:: ----------------------------------------------------------
+echo --- Clear main telemetry file
+if exist "%ProgramData%\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl" (
+    takeown /f "%ProgramData%\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl" /r /d y
+    icacls "%ProgramData%\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl" /grant administrators:F /t
+    echo "" > "%ProgramData%\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl"
+    echo Clear successful: "%ProgramData%\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl"
+) else (
+    echo "Main telemetry file does not exist. Good!"
+)
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------------Clear Event Logs in Event Viewer-------------
+:: ----------------------------------------------------------
+echo --- Clear Event Logs in Event Viewer
+REM https://social.technet.microsoft.com/Forums/en-US/f6788f7d-7d04-41f1-a64e-3af9f700e4bd/failed-to-clear-log-microsoftwindowsliveidoperational-access-is-denied?forum=win10itprogeneral
+wevtutil sl Microsoft-Windows-LiveId/Operational /ca:O:BAG:SYD:(A;;0x1;;;SY)(A;;0x5;;;BA)(A;;0x1;;;LA)
+for /f "tokens=*" %%i in ('wevtutil.exe el') DO (
+    echo Deleting event log: "%%i"
+    wevtutil.exe cl %1 "%%i"
+)
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------Clean Windows Defender scan history------------
+:: ----------------------------------------------------------
+echo --- Clean Windows Defender scan history
+del "%ProgramData%\Microsoft\Windows Defender\Scans\History\" /s /f /q
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: Clear Optional Component Manager and COM+ components logs-
+:: ----------------------------------------------------------
+echo --- Clear Optional Component Manager and COM+ components logs
+del /f /q %SystemRoot%\comsetup.log
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------Clear Distributed Transaction Coordinator logs------
+:: ----------------------------------------------------------
+echo --- Clear Distributed Transaction Coordinator logs
+del /f /q %SystemRoot%\DtcInstall.log
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------Clear Pending File Rename Operations logs---------
+:: ----------------------------------------------------------
+echo --- Clear Pending File Rename Operations logs
+del /f /q %SystemRoot%\PFRO.log
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------Clear Windows Deployment Upgrade Process Logs-------
+:: ----------------------------------------------------------
+echo --- Clear Windows Deployment Upgrade Process Logs
+del /f /q %SystemRoot%\setupact.log
+del /f /q %SystemRoot%\setuperr.log
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------------Clear Windows Setup Logs-----------------
+:: ----------------------------------------------------------
+echo --- Clear Windows Setup Logs
+del /f /q %SystemRoot%\setupapi.log
+del /f /q %SystemRoot%\Panther\*
+del /f /q %SystemRoot%\inf\setupapi.app.log
+del /f /q %SystemRoot%\inf\setupapi.dev.log
+del /f /q %SystemRoot%\inf\setupapi.offline.log
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------Clear Windows System Assessment Tool logs---------
+:: ----------------------------------------------------------
+echo --- Clear Windows System Assessment Tool logs
+del /f /q %SystemRoot%\Performance\WinSAT\winsat.log
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ---------------Clear Password change events---------------
+:: ----------------------------------------------------------
+echo --- Clear Password change events
+del /f /q %SystemRoot%\debug\PASSWD.LOG
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------------Clear user web cache database---------------
+:: ----------------------------------------------------------
+echo --- Clear user web cache database
+del /f /q %localappdata%\Microsoft\Windows\WebCache\*.*
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ----Clear system temp folder when no one is logged in-----
+:: ----------------------------------------------------------
+echo --- Clear system temp folder when no one is logged in
+del /f /q %SystemRoot%\ServiceProfiles\LocalService\AppData\Local\Temp\*.*
+:: ----------------------------------------------------------
+
+
+:: Clear DISM (Deployment Image Servicing and Management) Logs
+echo --- Clear DISM (Deployment Image Servicing and Management) Logs
+del /f /q  %SystemRoot%\Logs\CBS\CBS.log
+del /f /q  %SystemRoot%\Logs\DISM\DISM.log
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------Clear WUAgent (Windows Update History) logs--------
+:: ----------------------------------------------------------
+echo --- Clear WUAgent (Windows Update History) logs
+setlocal EnableDelayedExpansion 
+    SET /A wuau_service_running=0
+    SC queryex "wuauserv"|Find "STATE"|Find /v "RUNNING">Nul||(
+        SET /A wuau_service_running=1
+        net stop wuauserv
+    )
+    del /q /s /f "%SystemRoot%\SoftwareDistribution"
+    IF !wuau_service_running! == 1 (
+        net start wuauserv
+    )
+endlocal
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: --------Clear Server-initiated Healing Events Logs--------
+:: ----------------------------------------------------------
+echo --- Clear Server-initiated Healing Events Logs
+del /f /q "%SystemRoot%\Logs\SIH\*"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ---------------Common Language Runtime Logs---------------
+:: ----------------------------------------------------------
+echo --- Common Language Runtime Logs
+del /f /q "%LocalAppData%\Microsoft\CLR_v4.0\UsageTraces\*"
+del /f /q "%LocalAppData%\Microsoft\CLR_v4.0_32\UsageTraces\*"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------------Network Setup Service Events Logs-------------
+:: ----------------------------------------------------------
+echo --- Network Setup Service Events Logs
+del /f /q "%SystemRoot%\Logs\NetSetup\*"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ----------Disk Cleanup tool (Cleanmgr.exe) Logs-----------
+:: ----------------------------------------------------------
+echo --- Disk Cleanup tool (Cleanmgr.exe) Logs
+del /f /q "%SystemRoot%\System32\LogFiles\setupcln\*"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ----------Clear Windows update and SFC scan logs----------
+:: ----------------------------------------------------------
+echo --- Clear Windows update and SFC scan logs
+del /f /q %SystemRoot%\Temp\CBS\*
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ---------Clear Windows Update Medic Service logs----------
+:: ----------------------------------------------------------
+echo --- Clear Windows Update Medic Service logs
+takeown /f %SystemRoot%\Logs\waasmedic /r /d y
+icacls %SystemRoot%\Logs\waasmedic /grant administrators:F /t
+rd /s /q %SystemRoot%\Logs\waasmedic
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------Clear Cryptographic Services Traces------------
+:: ----------------------------------------------------------
+echo --- Clear Cryptographic Services Traces
+del /f /q %SystemRoot%\System32\catroot2\dberr.txt
+del /f /q %SystemRoot%\System32\catroot2.log
+del /f /q %SystemRoot%\System32\catroot2.jrs
+del /f /q %SystemRoot%\System32\catroot2.edb
+del /f /q %SystemRoot%\System32\catroot2.chk
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ----------------Windows Update Events Logs----------------
+:: ----------------------------------------------------------
+echo --- Windows Update Events Logs
+del /f /q "%SystemRoot%\Logs\SIH\*"
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------------------Windows Update Logs--------------------
+:: ----------------------------------------------------------
+echo --- Windows Update Logs
+del /f /q "%SystemRoot%\Traces\WindowsUpdate\*"
+:: ----------------------------------------------------------

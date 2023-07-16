@@ -1,0 +1,8 @@
+
+:: ----------------------------------------------------------
+:: -----------------Your Phone Companion app-----------------
+:: ----------------------------------------------------------
+echo --- Your Phone Companion app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.WindowsPhone' | Remove-AppxPackage"
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.Windows.Phone' | Remove-AppxPackage"
+:: ----------------------------------------------------------

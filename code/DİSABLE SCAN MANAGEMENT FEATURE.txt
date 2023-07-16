@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -----------------Scan Management feature------------------
+:: ----------------------------------------------------------
+echo --- Scan Management feature
+dism /Online /Disable-Feature /FeatureName:"ScanManagementConsole" /NoRestart
+:: ----------------------------------------------------------

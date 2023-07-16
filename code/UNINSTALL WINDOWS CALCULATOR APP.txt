@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ------------------Windows Calculator app------------------
+:: ----------------------------------------------------------
+echo --- Windows Calculator app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.WindowsCalculator' | Remove-AppxPackage"
+:: ----------------------------------------------------------

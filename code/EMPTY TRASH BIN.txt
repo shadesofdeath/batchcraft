@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ---------------------Empty trash bin----------------------
+:: ----------------------------------------------------------
+echo --- Empty trash bin
+PowerShell -ExecutionPolicy Unrestricted -Command "$bin = (New-Object -ComObject Shell.Application).NameSpace(10); $bin.items() | ForEach {; Write-Host "^""Deleting $($_.Name) from Recycle Bin"^""; Remove-Item $_.Path -Recurse -Force; }"
+:: ----------------------------------------------------------

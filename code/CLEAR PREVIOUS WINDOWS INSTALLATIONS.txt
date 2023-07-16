@@ -1,0 +1,14 @@
+
+:: ----------------------------------------------------------
+:: -----------Clear previous Windows installations-----------
+:: ----------------------------------------------------------
+echo --- Clear previous Windows installations
+if exist "%SystemDrive%\Windows.old" (
+    takeown /f "%SystemDrive%\Windows.old" /a /r /d y
+    icacls "%SystemDrive%\Windows.old" /grant administrators:F /t
+    rd /s /q "%SystemDrive%\Windows.old"
+    echo Deleted previous installation from "%SystemDrive%\Windows.old\"
+)  else (
+    echo No previous Windows installation has been found
+)
+:: ----------------------------------------------------------

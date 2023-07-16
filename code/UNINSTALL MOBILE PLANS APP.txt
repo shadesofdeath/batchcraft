@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ---------------------Mobile Plans app---------------------
+:: ----------------------------------------------------------
+echo --- Mobile Plans app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.OneConnect' | Remove-AppxPackage"
+:: ----------------------------------------------------------

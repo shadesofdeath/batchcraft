@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: -----------------Mixed Reality Portal app-----------------
+:: ----------------------------------------------------------
+echo --- Mixed Reality Portal app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.MixedReality.Portal' | Remove-AppxPackage"
+:: ----------------------------------------------------------

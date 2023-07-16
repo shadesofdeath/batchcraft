@@ -1,0 +1,9 @@
+
+:: ----------------------------------------------------------
+:: -----Disable Customer Experience Improvement Program------
+:: ----------------------------------------------------------
+echo --- Disable Customer Experience Improvement Program
+schtasks /change /TN "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /DISABLE
+schtasks /change /TN "\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask" /DISABLE
+schtasks /change /TN "\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" /DISABLE
+:: ----------------------------------------------------------

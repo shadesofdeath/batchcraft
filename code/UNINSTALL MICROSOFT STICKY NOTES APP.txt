@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ----------------Microsoft Sticky Notes app----------------
+:: ----------------------------------------------------------
+echo --- Microsoft Sticky Notes app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.MicrosoftStickyNotes' | Remove-AppxPackage"
+:: ----------------------------------------------------------

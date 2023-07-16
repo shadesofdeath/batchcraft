@@ -1,0 +1,31 @@
+
+:: ----------------------------------------------------------
+:: ---------------------Hyper-V feature----------------------
+:: ----------------------------------------------------------
+echo --- Hyper-V feature
+dism /Online /Disable-Feature /FeatureName:"Microsoft-Hyper-V-All" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -----------Hyper-V GUI Management Tools feature-----------
+:: ----------------------------------------------------------
+echo --- Hyper-V GUI Management Tools feature
+dism /Online /Disable-Feature /FeatureName:"Microsoft-Hyper-V-Management-Clients" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: -------------Hyper-V Management Tools feature-------------
+:: ----------------------------------------------------------
+echo --- Hyper-V Management Tools feature
+dism /Online /Disable-Feature /FeatureName:"Microsoft-Hyper-V-Tools-All" /NoRestart
+:: ----------------------------------------------------------
+
+
+:: ----------------------------------------------------------
+:: ------Hyper-V Module for Windows PowerShell feature-------
+:: ----------------------------------------------------------
+echo --- Hyper-V Module for Windows PowerShell feature
+dism /Online /Disable-Feature /FeatureName:"Microsoft-Hyper-V-Management-PowerShell" /NoRestart
+:: ----------------------------------------------------------

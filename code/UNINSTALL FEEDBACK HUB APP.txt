@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ---------------------Feedback Hub app---------------------
+:: ----------------------------------------------------------
+echo --- Feedback Hub app
+PowerShell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage 'Microsoft.WindowsFeedbackHub' | Remove-AppxPackage"
+:: ----------------------------------------------------------

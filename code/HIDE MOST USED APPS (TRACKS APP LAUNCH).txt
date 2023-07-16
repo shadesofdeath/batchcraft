@@ -1,0 +1,7 @@
+
+:: ----------------------------------------------------------
+:: ---------Hide most used apps (tracks app launch)----------
+:: ----------------------------------------------------------
+echo --- Hide most used apps (tracks app launch)
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackProgs" /d 0 /t REG_DWORD /f
+:: ----------------------------------------------------------
