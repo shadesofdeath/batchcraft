@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Pen+Script&family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+/* Genel stiller */
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #ffffff;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: #252525;
+  color: #f5f5f5;
+}
+
+/* SVG stilleri */
+svg {
+  font-family: "Russo One", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+svg text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #252525;
+  font-size: 40px;
+  box-shadow: 2px 5px 10px -4px #252525;
+}
+
+@media (prefers-color-scheme: dark) {
+  svg text {
+    animation: stroke-dark 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #dddbdb;
+    font-size: 40px;
+    box-shadow: 2px 5px 10px -4px #dfdfdf;
+  }
+}
+
+@keyframes stroke-dark {
+  0% {
+    fill: #dfdfdf;
+    stroke: #dfdfdf;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(187, 187, 187, 0);
+    stroke: rgba(179, 179, 179, 0.62);
+  }
+  80% {
+    fill: rgba(182, 182, 182, 0);
+    stroke: rgba(185, 185, 185, 0.62);
+    stroke-width: 3;
+  }
+  100% {
+    fill: #8f8f8f;
+    stroke: rgba(170, 53, 53, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+
+/* Card stilleri */
+.card {
+  box-shadow: 2px 5px 10px -4px rgba(0, 0, 0, 0.14);
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  background-color: #f4f4f4;
+  width: auto;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.dark-mode .card {
+  background-color: #252525;
+  color: #ffffff;
+  box-shadow: 2px 5px 10px -4px rgba(255, 255, 255, 0.308);
+}
+
+/* Dropdown stilleri */
+.dropdown {
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 400px;
+  max-height: 600px;
+  display: none;
+  position: absolute;
+  text-align: left;
+  z-index: 1;
+  background-color: #f4f4f4;
+  padding: 5px;
+  box-shadow: 2px 5px 10px -4px rgba(0, 0, 0, 0.54);
+  border-radius: 16px;
+}
+
+.card:hover .dropdown {
+  overflow-y: auto;
+  max-height: 300px;
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: left;
+  z-index: 1;
+  padding: 5px;
+}
+
+
+.dark-mode .dropdown {
+  background-color: #252525;
+  color: #ffffff;
+  box-shadow: 2px 5px 10px -4px rgba(255, 255, 255, 0.308);
+}
+
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 16px;
+  margin-right: 10px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: solid 1px rgba(0, 0, 0, 0.267);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #000000;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox-container .checkmark::after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.dark-mode .checkbox-container input:checked ~ .checkmark {
+  background-color: #3b3b3b;
+}
+
+.dark-mode  .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #3b3b3b;
+  border-radius: 16px;
+  border: solid 1px rgba(0, 0, 0, 0.267);
+}
+
+/* Pre container stilleri */
+.pre-container {
+  display: flex;
+}
+
+/* Satır numaraları stilleri */
+.line-numbers {
+  padding: 0 16px;
+  color: #3f3f3f;
+  background-color: #ffffff;
+  border-right: 1px solid #ccc;
+  user-select: none;
+  pointer-events: none;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 1px;
+  margin-block-start: 13px;
+  box-shadow: 2px 5px 10px -4px rgba(0, 0, 0, 0.14);
+}
+
+.dark-mode .line-numbers {
+  color: #f5f5f5;
+  background-color: #252525;
+  border-right: 1px solid #777;
+  box-shadow: 2px 5px 10px -4px rgba(255, 255, 255, 0.308);
+}
+
+/* Butonlar container stilleri */
+#butonlar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* Düğme stilleri */
+button {
+  font-family: 'Roboto Mono', monospace;
+  color: #000000 !important;
+  font-size: 16px;
+  width: 200px;
+  padding: 10px 25px;
+  border: 0px solid #000000;
+  border-radius: 18px;
+  background-color: #e6e6e6;
+  box-shadow: 2px 5px 10px -4px rgba(15, 15, 15, 0.308);
+  margin: 10px;
+}
+
+.dark-mode button {
+  color: #ffffff !important;
+  background-color: #252525;
+  box-shadow: 2px 5px 10px -4px rgba(255, 255, 255, 0.308);
+}
+
+.dark-mode button:hover {
+  color: #3d3d3d !important;
+  background-color: #ececec;
+  box-shadow: 2px 5px 10px -4px rgba(255, 255, 255, 0.308);
+}
+
+
+button:hover {
+  color: #FFF5F5 !important;
+  background-color: #000000;
+}
+
+/* Önizleme stilleri */
+#preview {
+  font-family: 'Roboto Mono', monospace;
+  padding: 0 16px;
+  border-end-end-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 2px 5px 10px -4px rgba(0, 0, 0, 0.14);
+  width: 90vw; /* Ekran genişliği kadar uzunluk */
+}
+
+.dark-mode #preview {
+  border-end-end-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 2px 5px 10px -4px rgba(255, 255, 255, 0.14);
+  background-color: #252525;
+}
+
+/* Menu stilleri */
+.menu {
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Sadece dikey kaydırma çubuğunu özelleştirmek için stil belirtimi */
+::-webkit-scrollbar {
+  width: 10px; /* Kaydırma çubuğunun genişliği */
+  background-color:  transparent;
+}
+
+/* Dikey kaydırma çubuğu arka planı */
+::-webkit-scrollbar-track {
+  background-color:  transparent;
+}
+
+/* Dikey kaydırma çubuğu kolu */
+::-webkit-scrollbar-thumb {
+  background-color: #474747;
+  border-radius: 16px;
+}
+
+
+
+.sub-card.open {
+  display: flex;
+  flex-direction: column;
+}
+

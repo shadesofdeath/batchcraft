@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+      <meta http-equiv="expires" content="0">
+      <meta http-equiv="pragma" content="no-cache">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" integrity="sha512-Jp3oCtkKo8j/WRrHq2jrYMtJogclQybtR6+81arCLTO/TvWj3oaF4NkZQs2bTqWJ8An8L2MLKKfvsn3H8vZP1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link id="highlight-css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+      <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <svg>
+      <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+        BatchCraft
+      </text>
+    </svg>
+  </div>
+    <div class="menu"> 
+      <div class="card">
+        CLEANUP <i class="fa-solid fa-broom"></i>
+        <div class="dropdown">
+           <label class="checkbox-container">CLEAN APPLİCATİON HİSTORY
+              <input type="checkbox" id="batch1" name="batch1" value="CLEAN APPLİCATİON HİSTORY">
+              <span class="checkmark"></span>
+           </label>
+           <label class="checkbox-container">CLEAR BROWSER HİSTORY
+              <input type="checkbox" id="batch2" name="batch2" value="CLEAR BROWSER HİSTORY">
+              <span class="checkmark"></span>
+           </label>
+           <label class="checkbox-container">CLEAR WİNDOWS LOGS & CACHES
+               <input type="checkbox" id="batch3" name="batch3" value="CLEAR WİNDOWS LOGS CACHES">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">CLEAR CREDENTIALS FROM WINDOWS CREDENTIAL MANAGER
+               <input type="checkbox" id="batch4" name="batch4" value="CLEAR CREDENTIALS FROM WINDOWS CREDENTIAL MANAGER">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">DELETE CONTROVERSIAL DEFAULT0 USER
+               <input type="checkbox" id="batch5" name="batch5" value="DELETE CONTROVERSIAL DEFAULT0 USER">
+               <span class="checkmark"></span>
+            </label>
+            </label>
+            <label class="checkbox-container">EMPTY TRASH BIN
+               <input type="checkbox" id="batch5" name="batch5" value="EMPTY TRASH BIN">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">ENABLE RESET BASE IN DISM COMPONENT STORE
+               <input type="checkbox" id="batch5" name="batch5" value="ENABLE RESET BASE IN DISM COMPONENT STORE">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">CLEAR WINDOWS PRODUCT KEY FROM REGISTRY
+               <input type="checkbox" id="batch5" name="batch5" value="CLEAR WINDOWS PRODUCT KEY FROM REGISTRY">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">CLEAR VOLUME BACKUPS (SHADOW COPIES)
+               <input type="checkbox" id="batch5" name="batch5" value="CLEAR VOLUME BACKUPS (SHADOW COPIES)">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">REMOVE DEFAULT APPS ASSOCIATIONS
+               <input type="checkbox" id="batch5" name="batch5" value="REMOVE DEFAULT APPS ASSOCIATIONS">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">CLEAR (RESET) NETWORK DATA USAGE
+               <input type="checkbox" id="batch5" name="batch5" value="CLEAR (RESET) NETWORK DATA USAGE">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">CLEAR PREVIOUS WINDOWS INSTALLATIONS
+               <input type="checkbox" id="batch5" name="batch5" value="CLEAR PREVIOUS WINDOWS INSTALLATIONS">
+               <span class="checkmark"></span>
+        </div> 
+    </div>
+    <div class="card">
+      DISABLE OS DATA COLLECTION <i class="ri-shield-line"></i>
+        <div class="dropdown">
+      </label>
+      <label class="checkbox-container">DISABLE CONNECTED USER EXPERIENCES AND TELEMETRY SERVICE
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE CONNECTED USER EXPERIENCES AND TELEMETRY SERVICE">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WAP PUSH MESSAGE ROUTING SERVICE
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WAP PUSH MESSAGE ROUTING SERVICE">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE DIAGNOSTICS HUB STANDARD COLLECTOR SERVICE
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE DIAGNOSTICS HUB STANDARD COLLECTOR SERVICE">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE DIAGNOSTIC EXECUTION SERVICE
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE DIAGNOSTIC EXECUTION SERVICE">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WEBCAM TELEMETRY (DEVICECENSUS.EXE)
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WEBCAM TELEMETRY (DEVICECENSUS.EXE)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE COMPATIBILITY TELEMETRY (APPLICATION EXPERIENCE)
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE COMPATIBILITY TELEMETRY (APPLICATION EXPERIENCE)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE CUSTOMER EXPERIENCE IMPROVEMENT (CEIP/SQM)
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE CUSTOMER EXPERIENCE IMPROVEMENT (CEIP/SQM)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE APPLICATION IMPACT TELEMETRY (AIT)
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE APPLICATION IMPACT TELEMETRY (AIT)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE CUSTOMER EXPERIENCE IMPROVEMENT PROGRAM
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE CUSTOMER EXPERIENCE IMPROVEMENT PROGRAM">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE TELEMETRY IN DATA COLLECTION POLICY
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE TELEMETRY IN DATA COLLECTION POLICY">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE LICENSE TELEMETRY
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE LICENSE TELEMETRY">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE ERROR REPORTING
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE ERROR REPORTING">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE DEVICE METADATA RETRIEVAL (BREAKS AUTO UPDATES)
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE DEVICE METADATA RETRIEVAL (BREAKS AUTO UPDATES)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DO NOT INCLUDE DRIVERS WITH WINDOWS UPDATES
+         <input type="checkbox" id="batch5" name="batch5" value="DO NOT INCLUDE DRIVERS WITH WINDOWS UPDATES">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">PREVENT WINDOWS UPDATE FOR DEVICE DRIVER SEARCH
+         <input type="checkbox" id="batch5" name="batch5" value="PREVENT WINDOWS UPDATE FOR DEVICE DRIVER SEARCH">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DENY APP ACCESS TO PERSONAL INFORMATION
+         <input type="checkbox" id="batch5" name="batch5" value="DENY APP ACCESS TO PERSONAL INFORMATION">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE LOCATION ACCESS
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE LOCATION ACCESS">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE CORTANA
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE CORTANA">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE SEARCH INDEXING ENCRYPTED ITEMS / STORES
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE SEARCH INDEXING ENCRYPTED ITEMS - STORES">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DO NOT USE AUTOMATIC LANGUAGE DETECTION WHEN INDEXING
+         <input type="checkbox" id="batch5" name="batch5" value="DO NOT USE AUTOMATIC LANGUAGE DETECTION WHEN INDEXING">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DO NOT ALLOW SEARCH TO USE LOCATION
+         <input type="checkbox" id="batch5" name="batch5" value="DO NOT ALLOW SEARCH TO USE LOCATION">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WEB SEARCH IN SEARCH BAR
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WEB SEARCH IN SEARCH BAR">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DO NOT SEARCH THE WEB OR DISPLAY WEB RESULTS IN SEARCH
+         <input type="checkbox" id="batch5" name="batch5" value="DO NOT SEARCH THE WEB OR DISPLAY WEB RESULTS IN SEARCH">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE BING SEARCH
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE BING SEARCH">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WINDOWS TIPS
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WINDOWS TIPS">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WINDOWS SPOTLIGHT (RANDOM WALLPAPER ON LOCK SCREEN)
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WINDOWS SPOTLIGHT (RANDOM WALLPAPER ON LOCK SCREEN)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE MICROSOFT CONSUMER EXPERIENCES
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE MICROSOFT CONSUMER EXPERIENCES">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE AD CUSTOMIZATION WITH ADVERTISING ID
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE AD CUSTOMIZATION WITH ADVERTISING ID">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">TURN OFF SUGGESTED CONTENT IN SETTINGS APP
+         <input type="checkbox" id="batch5" name="batch5" value="TURN OFF SUGGESTED CONTENT IN SETTINGS APP">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DO NOT ALLOW THE USE OF BIOMETRICS
+         <input type="checkbox" id="batch5" name="batch5" value="DO NOT ALLOW THE USE OF BIOMETRICS">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DO NOT ALLOW USERS TO LOG ON USING BIOMETRICS
+         <input type="checkbox" id="batch5" name="batch5" value="DO NOT ALLOW USERS TO LOG ON USING BIOMETRICS">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WINDOWS BIOMETRIC SERVICE
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WINDOWS BIOMETRIC SERVICE">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WINDOWS INSIDER PROGRAM
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WINDOWS INSIDER PROGRAM">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE ALL SETTINGS SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE ALL SETTINGS SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE APPLICATION SETTING SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE APPLICATION SETTING SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE APP SYNC SETTING SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE APP SYNC SETTING SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE CREDENTIALS SETTING SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE CREDENTIALS SETTING SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE PERSONALIZATION SETTING SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE PERSONALIZATION SETTING SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE START LAYOUT SETTING SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE START LAYOUT SETTING SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WEB BROWSER SETTING SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WEB BROWSER SETTING SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WINDOWS SETTING SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WINDOWS SETTING SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE LANGUAGE SETTING SYNC
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE LANGUAGE SETTING SYNC">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE CLOUD SPEECH RECOGNITION
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE CLOUD SPEECH RECOGNITION">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE ACTIVE PROBING (PINGS TO MSFT NCSI SERVER)
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE ACTIVE PROBING (PINGS TO MSFT NCSI SERVER)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">OPT OUT FROM WINDOWS PRIVACY CONSENT
+         <input type="checkbox" id="batch5" name="batch5" value="OPT OUT FROM WINDOWS PRIVACY CONSENT">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WINDOWS FEEDBACK
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WINDOWS FEEDBACK">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE TEXT AND HANDWRITING COLLECTION
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE TEXT AND HANDWRITING COLLECTION">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">TURN OFF SENSORS
+         <input type="checkbox" id="batch5" name="batch5" value="TURN OFF SENSORS">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WI-FI SENSE
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WI-FI SENSE">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">HIDE MOST USED APPS (TRACKS APP LAUNCH)
+         <input type="checkbox" id="batch5" name="batch5" value="HIDE MOST USED APPS (TRACKS APP LAUNCH)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE INVENTORY COLLECTOR
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE INVENTORY COLLECTOR">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WEBSITE ACCESS OF LANGUAGE LIST
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WEBSITE ACCESS OF LANGUAGE LIST">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE AUTO DOWNLOADING MAPS
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE AUTO DOWNLOADING MAPS">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE STEPS RECORDER
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE STEPS RECORDER">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE GAME SCREEN RECORDING
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE GAME SCREEN RECORDING">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE WINDOWS DRM INTERNET ACCESS
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE WINDOWS DRM INTERNET ACCESS">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE FEEDBACK ON WRITE (SENDING TYPING INFO)
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE FEEDBACK ON WRITE (SENDING TYPING INFO)">
+         <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-container">DISABLE ACTIVITY FEED
+         <input type="checkbox" id="batch5" name="batch5" value="DISABLE ACTIVITY FEED">
+         <span class="checkmark"></span>
+      </label>
+        </div>
+    </div>
+    <div class="card">
+      BLOATWARE <i class="ri-delete-bin-line"></i>
+        <div class="dropdown">
+           <label class="checkbox-container">UNINSTALL MICROSOFT 3D BUILDER APP
+              <input type="checkbox" id="batch3" name="batch5" value="UNINSTALL MICROSOFT 3D BUILDER APP">
+              <span class="checkmark"></span>
+           </label>
+           <label class="checkbox-container">UNINSTALL 3D VIEWER APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL 3D VIEWER APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL MSN WEATHER APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MSN WEATHER APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL MSN SPORTS APP
+                <input type="checkbox" id="batch3" name="batch3" value="MSN SPORTS APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MSN NEWS APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MSN NEWS APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL MSN MONEY APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MSN MONEY APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL HEIF IMAGE EXTENSIONS APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL HEIF IMAGE EXTENSIONS APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL VP9 VIDEO EXTENSIONS APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL VP9 VIDEO EXTENSIONS APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL WEB MEDIA EXTENSIONS APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WEB MEDIA EXTENSIONS APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL WEBP IMAGE EXTENSIONS APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WEBP IMAGE EXTENSIONS APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MY OFFICE APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MY OFFICE APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL ONENOTE APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL ONENOTE APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL SWAY APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL SWAY APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL XBOX CONSOLE COMPANION APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL XBOX CONSOLE COMPANION APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL XBOX LIVE IN-GAME EXPERIENCE APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL XBOX LIVE IN-GAME EXPERIENCE APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL XBOX GAME BAR APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL XBOX GAME BAR APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL XBOX GAME BAR PLUGIN APPCACHE
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL XBOX GAME BAR PLUGIN APPCACHE">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL XBOX IDENTITY PROVIDER APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL XBOX IDENTITY PROVIDER APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL XBOX SPEECH TO TEXT OVERLAY APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL XBOX SPEECH TO TEXT OVERLAY APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL GROOVE MUSIC APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL GROOVE MUSIC APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MOVIES AND TV APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MOVIES AND TV APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL YOUR PHONE COMPANION APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL YOUR PHONE COMPANION APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL COMMUNICATIONS - PHONE APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL COMMUNICATIONS - PHONE APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL YOUR PHONE APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL YOUR PHONE APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL APP CONNECTOR APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL APP CONNECTOR APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL CORTANA APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL CORTANA APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL APP INSTALLER APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL APP INSTALLER APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL GET HELP APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL GET HELP APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL MICROSOFT TIPS APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT TIPS APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MICROSOFT MESSAGING APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT MESSAGING APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL MIXED REALITY PORTAL APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MIXED REALITY PORTAL APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL FEEDBACK HUB APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL FEEDBACK HUB APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL WINDOWS ALARMS AND CLOCK APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WINDOWS ALARMS AND CLOCK APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL WINDOWS CAMERA APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WINDOWS CAMERA APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL PAINT 3D APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL PAINT 3D APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL WINDOWS MAPS APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WINDOWS MAPS APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL MICROSOFT STORE APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT STORE APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MICROSOFT PEOPLE APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT PEOPLE APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL MICROSOFT PAY APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT PAY APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL STORE PURCHASE APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL STORE PURCHASE APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL SNIP & SKETCH APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL SNIP & SKETCH APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL PRINT 3D APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL PRINT 3D APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL MOBILE PLANS APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MOBILE PLANS APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MICROSOFT SOLITAIRE COLLECTION APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT SOLITAIRE COLLECTION APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL MICROSOFT STICKY NOTES APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT STICKY NOTES APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MAIL AND CALENDAR APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MAIL AND CALENDAR APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL WINDOWS CALCULATOR APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WINDOWS CALCULATOR APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MICROSOFT PHOTOS APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT PHOTOS APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL SKYPE APP
+               <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL SKYPE APP">
+               <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">UNINSTALL GROUPME APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL GROUPME APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL WINDOWS VOICE RECORDER APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WINDOWS VOICE RECORDER APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL ALL THIRT PARTY APPS (SPOTİFY - PHOTOSHOP ETC.)
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL ALL THIRT PARTY APPS (SPOTİFY - PHOTOSHOP ETC.)">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL MICROSOFT ADVERTISING APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT ADVERTISING APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL REMOTE DESKTOP APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL REMOTE DESKTOP APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL MICROSOFT TO DO APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT TO DO APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL MICROSOFT EDGE
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL MICROSOFT EDGE">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL CORTANA SYSTEM APPS
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL CORTANA SYSTEM APPS">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL PEOPLE HUB
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL PEOPLE HUB">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL WİNDOWS FEEDBACK
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WİNDOWS FEEDBACK">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL FILE PICKER APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL FILE PICKER APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL FILE EXPLORER APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL FILE EXPLORER APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL APP RESOLVER UX APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL APP RESOLVER UX APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL ADD SUGGESTED FOLDERS TO LIBRARY APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL ADD SUGGESTED FOLDERS TO LIBRARY APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL CONTACT SUPPORT APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL CONTACT SUPPORT APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">UNINSTALL WINDOWS PRINT 3D APP
+                <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL WINDOWS PRINT 3D APP">
+                <span class="checkmark"></span>
+             </label>
+             <label class="checkbox-container">UNINSTALL PRINT UI APP
+                 <input type="checkbox" id="batch3" name="batch3" value="UNINSTALL PRINT UI APP">
+                 <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">REMOVE ONEDRIVE
+                <input type="checkbox" id="batch3" name="batch3" value="REMOVE ONEDRIVE">
+                <span class="checkmark"></span>
+             </label>
+        </div>
+    </div>
+    <div class="card">
+      CAPABILITIES & FEATURES <i class="ri-settings-line"></i>
+        <div class="dropdown">
+           <label class="checkbox-container">DİSABLE HYPER-V FEATURE
+              <input type="checkbox" id="batch3" name="batch3" value="DİSABLE HYPER-V FEATURE">
+              <span class="checkmark"></span>
+           </label>
+           <label class="checkbox-container">DİSABLE TELNET CLIENT FEATURE
+            <input type="checkbox" id="batch3" name="batch3" value="DİSABLE TELNET CLIENT FEATURE">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">DİSABLE NET.TCP PORT SHARING FEATURE
+           <input type="checkbox" id="batch3" name="batch3" value="DİSABLE NET.TCP PORT SHARING FEATURE">
+           <span class="checkmark"></span>
+        </label>
+        <label class="checkbox-container">DİSABLE SMB DIRECT FEATURE
+            <input type="checkbox" id="batch3" name="batch3" value="DİSABLE SMB DIRECT FEATURE">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">DİSABLE TFTP CLIENT FEATURE
+           <input type="checkbox" id="batch3" name="batch3" value="DİSABLE TFTP CLIENT FEATURE">
+           <span class="checkmark"></span>
+        </label>
+        <label class="checkbox-container">DİSABLE PRINTING FEATURES
+            <input type="checkbox" id="batch3" name="batch3" value="DİSABLE PRINTING FEATURES">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">DİSABLE DIRECT PLAY FEATURE
+          <input type="checkbox" id="batch3" name="batch3" value="DİSABLE DIRECT PLAY FEATURE">
+          <span class="checkmark"></span>
+       </label>
+       <label class="checkbox-container">DİSABLE INTERNET EXPLORER FEATURE
+           <input type="checkbox" id="batch3" name="batch3" value="DİSABLE INTERNET EXPLORER FEATURE">
+           <span class="checkmark"></span>
+        </label>
+        <label class="checkbox-container">DİSABLE LEGACY COMPONENTS FEATURE
+           <input type="checkbox" id="batch3" name="batch3" value="DİSABLE LEGACY COMPONENTS FEATURE">
+           <span class="checkmark"></span>
+        </label>
+        <label class="checkbox-container">DİSABLE MEDIA FEATURES FEATURE
+            <input type="checkbox" id="batch3" name="batch3" value="DİSABLE MEDIA FEATURES FEATURE">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">DİSABLE SCAN MANAGEMENT FEATURE
+           <input type="checkbox" id="batch3" name="batch3" value="DİSABLE SCAN MANAGEMENT FEATURE">
+           <span class="checkmark"></span>
+        </label>
+        <label class="checkbox-container">DİSABLE WINDOWS FAX AND SCAN FEATURE
+            <input type="checkbox" id="batch3" name="batch3" value="DİSABLE WINDOWS FAX AND SCAN FEATURE">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">DİSABLE WINDOWS MEDIA PLAYER FEATURE
+           <input type="checkbox" id="batch3" name="batch3" value="DİSABLE WINDOWS MEDIA PLAYER FEATURE">
+           <span class="checkmark"></span>
+        </label>
+        <label class="checkbox-container">DİSABLE WINDOWS SEARCH FEATURE
+            <input type="checkbox" id="batch3" name="batch3" value="DİSABLE WINDOWS SEARCH FEATURE">
+            <span class="checkmark"></span>
+         </label>
+        </div>
+    </div>
+    <div class="card">
+      PERSONALİZATİON <i class="ri-paint-brush-line"></i>
+        <div class="dropdown">
+         <label class="checkbox-container">Disable Show more options context menu in Windows 11
+            <input type="checkbox" id="batch3" name="batch3" value="Disable Show more options context menu in Windows 11">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">Change Size of Taskbar Icons to Small
+             <input type="checkbox" id="batch3" name="batch3" value="Change Size of Taskbar Icons to Small">
+             <span class="checkmark"></span>
+          </label>
+          <label class="checkbox-container">Change Size of Taskbar Icons to Medium
+            <input type="checkbox" id="batch3" name="batch3" value="Change Size of Taskbar Icons to Medium">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">Change Size of Taskbar Icons to Large
+             <input type="checkbox" id="batch3" name="batch3" value="Change Size of Taskbar Icons to Large">
+             <span class="checkmark"></span>
+          </label>
+          <label class="checkbox-container">Add  Copy To folder and Move To folder Context Menu in Windows 11
+            <input type="checkbox" id="batch3" name="batch3" value="Add  Copy To folder and Move To folder Context Menu in Windows 11">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">Disable Lock Screen in Windows 11 
+             <input type="checkbox" id="batch3" name="batch3" value="Disable Lock Screen in Windows 11">
+             <span class="checkmark"></span>
+          </label>
+          <label class="checkbox-container">Restore Classic Start Menu in Windows 11 <p style="color: red;">(The method no longer works starting with Windows 11 build 22000.65.)</p>
+            <input type="checkbox" id="batch3" name="batch3" value="Restore Classic Start Menu in Windows 11">
+            <span class="checkmark"></span>
+         </label>
+         <label class="checkbox-container">Remove OneDrive in Navigation Pane of File Explorer in Windows 11
+             <input type="checkbox" id="batch3" name="batch3" value="Remove OneDrive in Navigation Pane of File Explorer in Windows 11">
+             <span class="checkmark"></span>
+          </label>
+          <label class="checkbox-container">Disable Peek in Windows 11
+            <input type="checkbox" id="batch3" name="batch3" value="RDisable Peek in Windows 11">
+            <span class="checkmark"></span>
+         </label>
+        </div>
+    </div>
+   </div>
+   </div>
+    <div id="butonlar">
+        <button onclick="copyCode()">Copy <i class="ri-file-copy-line"></i></button>
+        <button onclick="downloadCode()">Download <i class="ri-download-line"></i></button>
+        <button id="theme-toggle">Toggle Theme <i class="ri-contrast-2-line"></i></button>
+    </div>
+    <div class="pre-container">
+        <pre class="line-numbers"></pre>
+        <pre><code id="preview">echo off
+          title BatchCraft
+          if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b) 
+           
+</code></pre>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
