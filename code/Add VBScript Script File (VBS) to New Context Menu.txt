@@ -1,0 +1,3 @@
+
+REG ADD HKCR\.vbs\ShellNew /v ItemName /t REG_EXPAND_SZ /d "@%SystemRoot%\system32\notepad.exe,-470" /f
+REG ADD HKCR\.vbs\ShellNew /v NullFile /t REG_SZ /d "" /f

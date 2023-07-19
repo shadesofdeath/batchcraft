@@ -1,0 +1,2 @@
+
+REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer /v MaxCachedIcons /t REG_SZ /d 4096 /f

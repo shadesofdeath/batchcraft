@@ -1,0 +1,2 @@
+
+REG ADD HKCR\.bat\ShellNew /v NullFile /t REG_SZ /d "" /f

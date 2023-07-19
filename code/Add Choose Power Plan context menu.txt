@@ -1,0 +1,26 @@
+
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan /v Icon /t REG_SZ /d powercpl.dll /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan /v MUIVerb /t REG_SZ /d "Choose Power Plan" /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan /v Position /t REG_SZ /d Middle /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan /v SubCommands /t REG_SZ /d "" /f
+
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\01menu /v MUIVerb /t REG_SZ /d "Power Saver" /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\01menu /v Icon /t REG_SZ /d powercpl.dll /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\01menu\command /v @ /t REG_SZ /d "powercfg.exe /setactive a1841308-3541-4fab-bc81-f71556f20b4a" /f
+
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\02menu /v MUIVerb /t REG_SZ /d "Balanced" /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\02menu /v Icon /t REG_SZ /d powercpl.dll /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\02menu\command /v @ /t REG_SZ /d "powercfg.exe /setactive 381b4222-f694-41f0-9685-ff5bb260df2e" /f
+
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\03menu /v MUIVerb /t REG_SZ /d "High Performance" /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\03menu /v Icon /t REG_SZ /d powercpl.dll /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\03menu\command /v @ /t REG_SZ /d "powercfg.exe /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c" /f
+
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\04menu /v MUIVerb /t REG_SZ /d "Ultimate Performance" /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\04menu /v Icon /t REG_SZ /d powercpl.dll /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\04menu\command /v @ /t REG_SZ /d "powercfg.exe /setactive e9a42b02-d5df-448d-aa00-03f14749eb61" /f
+
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\05menu /v MUIVerb /t REG_SZ /d "Power Options" /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\05menu /v Icon /t REG_SZ /d powercpl.dll /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\05menu /v CommandFlags /t REG_DWORD /d 32 /f
+REG ADD HKCR\DesktopBackground\Shell\PowerPlan\shell\05menu\command /v @ /t REG_SZ /d "control.exe powercfg.cpl" /f
